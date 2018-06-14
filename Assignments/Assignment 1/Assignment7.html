@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Assignment 7</title>
+  <meta name="description" content="">
+  <meta name="author" content="Ashley Wallace">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <link rel="stylesheet" href="css/hpStyleSheet.css">
+<style>
+
+</style>
+<script>
+$(document).ready(function(){
+	
+	//load the book list
+	 $.ajax({
+              type: "get",
+              url: "bookList.php",
+              dataType: "json",
+              data: { "state": $("#state").val() },
+              success: function(data,status) {
+                 $("#books").html("<option>Select Book</option>");
+                 for (var i=0; i < data['bookTitles'].length; i++){
+                     $("#books").append("<option value=\"" + data["bookTitles"][i].id + "\">" 
+                     + data["bookTitles"][i].book + "</option>" );
+                 } 
+              },
+            });
+       
+});
+ </script>       
+</head>
+
+<body>
+  <div class="mainDiv">
+  	<h1>Assignment 7</h1>
+  	<br />
+  	<div align="center">
+  	<h2>Book Synopsis!</h2>
+  	<form action="catalog.php">
+       <p>
+        Select Book: <select id="books"></select><br /><br />
+       </p>
+    </form>
+  	<div align="center" id="bookSyn"></div>  		
+   </div>
+  </div>
+  
+  <script>
+  	   //load synopsis when book is selected
+  	   $("#books").change( function(){
+  	   	//alert($("#books").val());
+  	   	//$("#bookSyn").html("test");
+        $.ajax({
+            	type: "POST",
+            	url: "synLoad.php",
+        		dataType: 'text',
+            	data: { "id": $("#books").val() },
+            	success: function(data) {
+            		$("#bookSyn").html("<p>" + data + "</p>");
+            		//alert(data);
+            	},
+             }); 
+        } ); //close synopsis load
+  </script>
+  
+</body>
+</html>

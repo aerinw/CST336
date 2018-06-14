@@ -1,0 +1,109 @@
+th{
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:small;
+	border:solid 1px black;
+	border-spacing:0;
+	padding-top:0px;
+	padding-bottom:0px;
+	text-align:center;
+	background:#d9d9d9
+}
+
+table, td{
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:small;
+	padding:5px;
+	text-align:center;
+}
+
+.randTableEven{
+	background:#ff9966;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:small;
+	padding:5px;
+	text-align:center;
+}
+
+
+.randTableOdd{
+	background:#b3e6ff;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:small;
+	padding:5px;
+	text-align:center;
+}
+
+.heartTable{
+	background:#b30000;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:small;
+	padding:5px;
+	text-align:center;
+}
+
+body{
+	background-image: url("images/bgtile.png");
+	background:#f2f2f2;
+}
+
+.mainDiv{
+	width:950px;
+	margin:auto;
+	border:#FFFFFF 10px solid;
+	border-radius:10px;
+	padding:5px;
+	background:#808080
+}
+
+.subDiv{
+	width:600px;
+	position:relative;
+	right:5px;
+	border:0px;
+	padding:5px;	
+}
+.tableTitle{
+	font-weight:bold;
+	padding-left:5px;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:small;	
+}
+h1 {
+	color:#f2f2f2;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-align:center		
+}
+
+h2 {
+	color:#f2f2f2;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-align:center		
+}
+
+h3 {
+	color:#f2f2f2;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-align:center		
+}
+
+p, span {
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:small;
+	color:white;
+}
+
+a {
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color:black;
+	font-size:small;
+	text-decoration:none;
+}
+
+
+img{
+	border:5px #000000 solid;
+	border-radius:10px;
+	float:right
+}
+
+
